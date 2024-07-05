@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Services Page</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <header>
+        <img class="logo" src="Images/logo.jpg" alt="Suns Barbershop Logo">
+        <nav>
+            <ul class="nav_links">
+                <li><a href="landingpage.html">Home</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="services.html">Services</a></li>
+            </ul>
+        </nav>
+        <a class="cta" href="contact.html"><span class="button-text">Contact Us</span></a>
+    </header>
+  <main>
+    <br>
+    <h1>Our Services</h1>
+    <br>
+<button onclick="getProducts();">Show me the services </button>
+<button onclick="calculateCost();">What's the cost of services? </button>
+<br><br>
+<div id="products">
+  <table  border="1">
+  <tr>
+    <th width=260px>Service Name </th>
+    <th width=100px>Price</th>
+    <th width=220px>Quantity</th>
+  </tr>
+</table>
+<table  id="prd" border="1">
+  
+</table>
+</div>
+
+  </main>
+  
+<footer class="footer">
+  <p>&copy; Suns BarberShop</p>
+  <div class="social-icons">
+    <a href="https://www.instagram.com/sunsbarbershop/?hl=en" target="_blank"><i class="fa fa-instagram"></i></a>
+  </div>
+  <div>
+    <p>Phone: (480) 590-3466</p>
+  </div>
+  <div>
+    <p>Business Hours:</p>
+    <p>Mon - Sat: 10:00am - 7:00pm</p>
+    <p>Sun: 10:00am - 5:00pm</p>
+  </div>
+</footer>
+  
+<script src=https://code.jquery.com/jquery-3.6.4.min.js> </script>
+<script>
+
+  var products;
+function getProducts(){
+
+$.get("?tableName=products", function(productTable){
+ console.log(productTable);
+  products = JSON.parse(productTable);
+$("#prd").empty();
+
+  products.forEach(function(product){
+
+    $("#prd").append("<tr><td width=200px>" + product.prod_name + "</th><td width=50px>" + product.prod_price + "</th><td width=170px><input type='number' id = "+ product.prod_id +"></th></tr>");
+
+
+
+}); // for each
+
+$("#products").append("<div id='cost'></div>");
+});
+
+} // getProducts()
+
+function calculateCost(){
+    var sum = 0;
+    if (products){
+        $("#cost").empty();
+        
+        products.forEach(function(product){
+            sum = sum + product.prod_price * $("#" + product.prod_id).val();
+        }); //for each
+        
+        sum = sum * 1.1; // 10% tax
+        $("#cost").append("<div> Cost = $ " + sum.toFixed(2) + " incl. of 10% tax </div>");
+    }
+} //calculateCost()
+
+</script>
+
+
+</body>
+</html>

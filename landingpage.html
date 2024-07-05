@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Suns Barber Shop</title>
+  <link rel="stylesheet" href="landingpage.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  
+</head>
+
+<body>
+      <header>
+        <img class="logo" src="Images/logo.jpg" alt="Suns Barbershop Logo">
+        <nav>
+            <ul class="nav_links">
+                <li><a href="landingpage.html">Home</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="services.html">Services</a></li>
+            </ul>
+        </nav>
+        <a class="cta" href="contact.html"><span class="button-text">Contact Us</span></a>
+    </header>
+  <div class="title_location">
+    <h1 class="title">Suns Barber Shop</h1>
+    <p class="location">1868 E Apache Blvd, Tempe, AZ 85281</p>
+  </div>
+    <div class="buttonPosition">
+    <button type="button" onclick="redirectToContact()">Book Now</button>
+  </div>
+  <div class="line"></div>
+
+<script src="script.js"></script>
+
+  
+<div id="imageContainer" style="display: flex; justify-content: center;">
+<img class="sun-image" src="Images/SunsBarberOutside.jpeg" alt="Suns Barber Outside">
+<img class="sun-image" src="Images/SunsInterior.png" alt="Suns Interior">
+<img class="sun-image" src="Images/SunsInterior2.jpeg" alt="Suns Interior 2">
+
+</div>
+
+<script>
+  var images = [
+    "Images/SunsBarberOutside.jpeg",
+    "Images/SunsInterior.png",
+    "Images/SunsInterior2.jpeg"
+  ];
+
+  var imageContainer = document.getElementById("imageContainer");
+  var currentIndex = 0;
+
+  imageContainer.children[currentIndex].style.display = "block";
+
+  function rotateImages() {
+ 
+    imageContainer.children[currentIndex].style.display = "none";
+   
+    currentIndex = (currentIndex + 1) % images.length;
+ 
+    imageContainer.children[currentIndex].style.display = "block";
+  }
+
+ 
+  setInterval(rotateImages, 3000);
+</script>
+
+  <div class="box">
+    <h1>A.Whitehall</h1>
+    <p>"Andrew did a great job cutting my hair!! It’s always a little stressful going to a new barbershop the day before a big event ( family wedding tomorrow) but I could not be happier with the result. I recommend Andrew to anyone looking for a clean fade done right. Vibe was good, free soda’s and drinks and the entrance. Very reasonably priced for what you get"</p>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+  </div>
+  <div class="box">
+    <h1>Diego Valenzuela</h1>
+    <p>Went in last week for the first time as I was in need of a new barber due to my old one retiring. It's always nerve-racking trying to find a new barber, but these guys gave me probably the best cut I've ever gotten. I also gotta give a shout-out to Noah because he got me right by giving me some good suggestions as I have somewhat curly hair and I already know this will be my new barbershop. Everyone is super chill and pays attention to detail, and I ended up getting a better cut here than I ever did elsewhere. Definitely a 5/5 for me.</p>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+  </div>
+  <div class="box">
+    <h1>Chance Breeggemann</h1>
+    <p>I have been here many times, every cut is much faster than the average barber, the waits are shorter, and the cuts are better.  Every barber is nice and they offer free drinks while you wait. Best barber in tempe for a great price.</p>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+  </div>
+  <div class="services">
+  <h2>Our Services</h2>
+  <ul class="service-list">
+    <li>
+      <h3>Haircut</h3>
+      <p>Our skilled barbers provide precision haircuts tailored to your preferences.</p>
+    </li>
+    <li>
+      <h3>Head Shave</h3>
+      <p>Experience a clean and comfortable head shave for a fresh new look.</p>
+    </li>
+    <li>
+      <h3>Beard Trim</h3>
+      <p>Maintain your beard with a professional trim that suits your style.</p>
+    </li>
+    <li>
+      <h3>Eyebrows</h3>
+      <p>Keep your eyebrows looking sharp with our expert grooming services.</p>
+    </li>
+  </ul>
+  </div>
+  <div class="about-us">
+  <h2>About Us</h2>
+  <p>
+    Suns Barber Shop has been serving the Tempe community since 2010. Our team of experienced barbers is dedicated to providing top-quality haircuts and grooming services in a comfortable and friendly environment. Come experience the difference at Suns Barber Shop!
+  </p>
+</div>
+
+<footer class="footer">
+  <p>&copy; Suns BarberShop</p>
+  <div class="social-icons">
+    <a href="https://www.instagram.com/sunsbarbershop/?hl=en" target="_blank"><i class="fa fa-instagram"></i></a>
+  </div>
+  <div>
+    <p>Phone: (480) 590-3466</p>
+  </div>
+  <div>
+    <p>Business Hours:</p>
+    <p>Mon - Sat: 10:00am - 7:00pm</p>
+    <p>Sun: 10:00am - 5:00pm</p>
+  </div>
+</footer>
+
+</body> 
+
+</html>

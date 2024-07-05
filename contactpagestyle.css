@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+* 
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: cornsilk;
+    font-family: "montserrat", sans-serif;
+}
+li, a, button 
+{
+    font-family: "montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+}
+header 
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    background-color: purple;
+    height: 60px;
+}
+.logo 
+{
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+.nav_links 
+{
+    list-style: none;
+    background-color: purple;
+}
+.nav_links li 
+{
+    display: inline-block;
+    margin: 0 20px;
+}
+.nav_links li a 
+{
+    transition: all 0.3s ease 0s;
+    background-color: purple;
+}
+.nav_links li a:hover 
+{
+    color: orange;
+}
+
+.cta, .button-text
+{
+    background-color: purple;
+}
+#infoform
+{
+  float: right;
+  padding-right: 100px;
+  padding-top: 50px;
+}
+#formlabel
+{
+  text-align: center;
+  font-size: 15pt;
+  font-weight: bold;
+}
+.input
+{
+  width: 500px;
+  height: 40px;
+  border: solid;
+  background-color: white;
+  font-family: "montserrat", sans-serif;
+  font-size: 14pt;
+}
+form textarea
+{
+  width: 500px;
+  height: 200px;
+  border: solid;
+  background-color: white;
+  font-family: "montserrat", sans-serif;
+  font-size: 16pt;
+}
+#submitbutton
+{
+  padding-right: 175px;
+}
+#submit
+{
+  float: right;
+  padding: 20px 50px;
+  background-color: orange;
+  border: none;
+  border-radius: 70px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  font-family: "montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  color: white;
+}
+#storeinfo
+{
+  padding-left: 150px;
+}
+#storehours
+{
+  padding-top: 10px;
+}
+#storename
+{
+  font-size: 30pt;
+  font-weight: bold;
+}
+.title
+{
+  font-size: 24pt;
+  font-weight: bold;
+}
+.storedetails
+{
+  font-size: 18pt;
+}
+table caption
+{
+  font-size: 20pt;
+}
+table, td
+{
+  border: 1px solid;
+  width: 35%;
+  height: 25pt;
+  text-align: center;
+  background-color: white;
+  font-family: "montserrat", sans-serif;
+  font-size: 18px;
+}
+#map
+{
+  float: left;
+  padding-left: 150px;
+  padding-top: 50px;
+}
+
+.footer 
+{
+  background-color: purple;
+  color: white;
+  padding: 30px 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  clear: both;
+}
+
+.footer a, .footer p 
+{
+  background-color: purple;
+  color: white;
+  font-family: "montserrat", sans-serif;
+/*   margin:  */
+}
+
+.social-icons 
+{
+  display: flex;
+  align-items: center;
+}
+
+.social-icons a 
+{
+  margin: 0 5px;
+}
+
+.social-icons i 
+{
+  font-size: 24px;
+}
